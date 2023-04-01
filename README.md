@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 ## Running the script
 ```sh
-python main.app
+python main.py
 ```
 
 ## Relevant URLs:
