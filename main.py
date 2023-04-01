@@ -60,10 +60,8 @@ def parse_sheet(creds, spredsheet_id):
     print("Updating data... ", end ='')
     result = sheet.values().update(spreadsheetId=spredsheet_id, range=DATA_RANGE, valueInputOption=value_input_option, body={"values": update}).execute()
     print("done")
-
-     
   except HttpError as err:
-      print(err)
+    print(err)
 
 def main():
   print("Updating sheet https://docs.google.com/spreadsheets/d/%s" % SPREADSHEET_ID)

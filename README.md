@@ -12,7 +12,8 @@ pip install -r requirements.txt
 ```
 2. Follow instructions on the [Python quickstart guide](https://developers.google.com/docs/api/quickstart/python) to ensure API access
 3. Create your own sheet and extract the ID from the url
-4. Apply the ID to the appropriate line in main.py
+4. Extract the sheet ID from your Sheet URL. The sheet ID is the bold part of the following example: docs.google.com/spreadsheets/d/**1ypg-aT4fVPMarFrU4SlvafBXVT6knGwxBBVcxDlJQ2U**/edit#gid=0
+5. Apply the ID to the appropriate line in main.py
 
 ## Running the script
 ```sh
