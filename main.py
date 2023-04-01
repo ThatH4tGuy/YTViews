@@ -3,6 +3,7 @@ from __future__ import print_function
 import os.path
 
 from google.auth.transport.requests import Request
+from google_auth_oauthlib.flow import InstalledAppFlow
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
@@ -13,8 +14,8 @@ import requests
 SPREADSHEET_ID = '1ypg-aT4fVPMarFrU4SlvafBXVT6knGwxBBVcxDlJQ2U'
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-URL_RANGE = 'Views!A2:A'
-DATA_RANGE = 'Views!B2:B'
+URL_RANGE = 'Views!A2:A'    # range where we get the URLs from
+DATA_RANGE = 'Views!B2:B'   # range where we put the view count
 
 def authenticate():
   """Handles the authentication"""
@@ -22,14 +23,12 @@ def authenticate():
   creds = None
   if os.path.exists('token.json'):
       creds = Credentials.from_authorized_user_file('token.json', SCOPES)
-  # If there are no (valid) credentials available, let the user log in.
   if not creds or not creds.valid:
       if creds and creds.expired and creds.refresh_token:
           creds.refresh(Request())
       else:
           flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
           creds = flow.run_local_server(port=0)
-      # Save the credentials for the next run
       with open('token.json', 'w') as token:
           token.write(creds.to_json())
   print("success!")
