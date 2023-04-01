@@ -20,8 +20,6 @@ python main.py
 ```
 
 ## Relevant URLs:
-
-# Relevant URLs:
 * [Google Cloud Console](https://console.cloud.google.com/)
 * [Sample Sheet](https://docs.google.com/spreadsheets/d/1ypg-aT4fVPMarFrU4SlvafBXVT6knGwxBBVcxDlJQ2U)
 * [Python quickstart guide](https://developers.google.com/docs/api/quickstart/python)
