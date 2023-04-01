@@ -19,6 +19,10 @@ pip install -r requirements.txt
 ```sh
 python main.py
 ```
+## Demo
+
+https://user-images.githubusercontent.com/38479934/229307725-9af7df49-77f9-4e12-99b7-5287cf9de5e3.mp4
+
 
 ## Relevant URLs:
 * [Google Cloud Console](https://console.cloud.google.com/)
