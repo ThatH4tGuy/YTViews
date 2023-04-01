@@ -1,5 +1,5 @@
 # YTViews
-Extracts the View count of youtube videos via an Google Sheet
+Extracts the youtube video view count based on a list of video URLs from a Google Docs Spreadhseet.
 
 ## Requirements
 - a Google account
