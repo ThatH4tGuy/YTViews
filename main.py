@@ -38,7 +38,7 @@ def get_ytdata(url):
     print("Getting data for %s... " % url, end = '')
     r = requests.get(url)
     s = BeautifulSoup(r.text, "html.parser")
-    views = s.select_one('meta[itemprop="interactionCount"][content]')['content']
+    views = s.select_one('meta[itemprop="interactionCount"]')['content']
     data = {'views': views}
     print("%s views" % data['views'])
     return data
